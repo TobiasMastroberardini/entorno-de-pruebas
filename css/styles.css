@@ -81,7 +81,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2d2d37;
+  background-color: #2D2D37;
+  z-index: 1003; /* Añade esto */
 }
 
 header .iconos {
@@ -661,10 +662,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Sidebar */
 .sidebar {
   position: fixed;
-  top: 60px; /* Comienza justo debajo del header */
-  left: -250px; /* Oculto inicialmente */
+  top: 0; /* Cambia de 60px a 0 */
+  left: -250px;
   width: 204px;
-  height: calc(100% - 60px); /* Altura total menos la altura del header */
+  height: 100%; /* Cambia a 100% */
   background: #0b0b0d;
   transition: left 0.3s ease;
   overflow-y: auto;
@@ -672,6 +673,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 13px;
   font-weight: 500;
   font-family: Roboto;
+  padding-top: 60px; /* Añade padding para el header */
 }
 
 /* Sidebar visible cuando el checkbox está checked */
@@ -713,15 +715,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Overlay (cierra menú al hacer click) */
 .overlay {
   position: fixed;
-  top: 60px; /* Comienza debajo del header */
+  top: 0; /* Cambia de 60px a 0 */
   left: 0;
   width: 100%;
-  height: calc(100% - 60px); /* Altura total menos la altura del header */
+  height: 100%; /* Cambia a 100% */
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 1000;
+  z-index: 1001; /* Asegúrate que sea menor que el sidebar */
 }
 
 /* Cuando está activo */
@@ -742,3 +744,4 @@ label[for="menu-toggle"] {
   align-items: center;
   cursor: pointer;
 }
+
