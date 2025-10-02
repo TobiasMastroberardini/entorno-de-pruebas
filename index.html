@@ -20,18 +20,14 @@
 
   <body>
 
-    <!-- Checkbox para el hack - DEBE IR PRIMERO -->
-  <input type="checkbox" id="menu-toggle" />
+    <!-- Checkbox para el hack -->
+    <input type="checkbox" id="menu-toggle" />
 
-  <!-- Sidebar - DEBE IR SEGUNDO -->
-  <div class="sidebar">
-    <!-- ... todo el contenido del sidebar ... -->
-    <!-- Sidebar separado -->
-<object id="sidebar-object" data="sidebar.html" type="text/html"></object>
-  </div>
+    <!-- Contenedor para el sidebar (se llenará con JavaScript) -->
+    <div id="sidebar-container"></div>
 
-  <!-- Overlay -->
-  <label class="overlay" for="menu-toggle"></label>
+    <!-- Overlay -->
+    <label class="overlay" for="menu-toggle"></label>
     
     <!-- Header -->
     <header>
@@ -192,4 +188,5 @@
 
   </body>
 </html>
+
 
