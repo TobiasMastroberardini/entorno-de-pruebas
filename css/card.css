@@ -1,0 +1,110 @@
+
+* {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.genders-suggestion{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    padding-top: 20px;
+   
+}
+
+.genre-section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+    padding-bottom: 20px;
+}
+
+.cards-carrusel{
+    display: flex;
+    flex-direction: row;
+    column-gap: 34px;
+}
+
+.body1{
+   color: white;
+   font-family: Roboto;
+   font-size: 1rem;
+   white-space:nowrap;
+   overflow:hidden;
+   text-overflow:ellipsis;
+   max-width:220px;
+}
+
+.card{
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #484848;
+    height: 170px;
+    width: 229px;
+
+}
+
+.show-card{
+    position: relative;
+    display: inline-block;
+    height: 123px;
+    overflow: hidden; /*recorta o esconde todo lo que sobre salga de la vision de imagen*/
+}
+
+.show-card img{
+    display: block;
+    width:100%;
+    height: auto;
+    
+}
+
+.show-card .heart-reaction{
+    position: absolute;
+    top: 5px;
+    left: 190px;
+    z-index: 1; /* aseguramos el boton frente a la imagen*/
+    height: 35px;
+    width: 35px;
+}
+
+.heart-reaction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #484848;
+}
+
+.card-information{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    position: absolute;
+    top: 9px;
+    padding-left: 5px;
+}
+
+.game-price{
+    font-family: Roboto;
+    font-size:12px;
+    color: #FDBBD9;
+}
+
+.btn-option-card{
+    position: absolute; 
+    left: 180px;
+    top: 12px; 
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+}
