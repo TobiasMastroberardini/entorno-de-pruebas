@@ -666,10 +666,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Sidebar */
 .sidebar {
   position: fixed;
-  top: 60px; /* Comienza justo debajo del header */
+  top: 60px;
   left: -250px;
   width: 204px;
-  height: calc(100% - 60px); /* Altura total menos la altura del header */
+  height: 100%;
   background: #0b0b0d;
   transition: left 0.3s ease;
   overflow-y: auto;
@@ -677,7 +677,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 13px;
   font-weight: 500;
   font-family: Roboto;
-  /* Eliminamos el padding-top ya que no es necesario */
+  padding-top: 60px; /* Espacio para el header */
 }
 
 /* Sidebar visible cuando el checkbox está checked */
@@ -719,10 +719,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Overlay (cierra menú al hacer click) */
 .overlay {
   position: fixed;
-  top: 60px; /* Comienza debajo del header */
+  top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 60px); /* Altura total menos la altura del header */
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
@@ -736,24 +736,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   pointer-events: auto;
 }
 
-/* Asegura que el header tenga la altura correcta y esté por encima */
-header {
-  height: 60px;
-  z-index: 1003; /* Mayor que sidebar y overlay */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
 
 /* Estilo para el label del menú hamburguesa */
 label[for="menu-toggle"] {
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-/* Ajuste para el contenido principal */
-body {
-  padding-top: 60px; /* Compensa la altura del header fijo */
 }
