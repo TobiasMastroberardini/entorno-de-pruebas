@@ -666,7 +666,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Sidebar */
 .sidebar {
   position: fixed;
-  top: 60px;
+  top: 0;
   left: -250px;
   width: 204px;
   height: 100%;
@@ -743,3 +743,4 @@ label[for="menu-toggle"] {
   align-items: center;
   cursor: pointer;
 }
+
